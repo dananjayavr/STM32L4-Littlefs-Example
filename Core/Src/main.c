@@ -40,11 +40,11 @@
 #define PAGE_SIZE           2048
 
 // Constants defined by the TRM, section 3.3.1
-#define FLASH_BLOCK_SIZE 2048  // FLash block size in bytes
+#define FLASH_BLOCK_SIZE 2048  // Flash block size in bytes
 #define FLASH_MAX_BLOCKS 512   // Total number of available blocks
 
 // Tunable constants
-#define LFS_BLOCKS 8     // Number of blocks to use
+#define LFS_BLOCKS 9     // Number of blocks to use
 #define LFS_BUF_SIZE 64  // Buffer size used for reads, writes, and cache
 #define LFS_MAX_FDS 6    // Maximum number of opened files / dirs
 
@@ -204,7 +204,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  printf("Hello, World!\r\n");
+  printf("---LittleFS Example---\r\n");
 
   // mount the filesystem
   int err = lfs_mount(&lfs, &cfg);
